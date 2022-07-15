@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int num,count,i,prime;
+    printf("prime number from 100 to 1000");
+    for(num=100;num<=1000;num++){
+        if (num==100)
+        {
+          printf("number 100 is niether prime nor composite\n");
+          continue;
+        }
+        count=sqrt(num);
+        prime=100;
+        for(i=2;i<=count;i++)
+        {
+          if (num%i==0)
+          {
+            prime=0;
+          }
+        }
+        if(prime)
+        {
+            printf("%d\t",num);
+        }
+    }
+}
